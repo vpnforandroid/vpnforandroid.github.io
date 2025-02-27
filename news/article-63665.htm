@@ -102,6 +102,7 @@
                   				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> </h1> <p>该注解来源于<code>jackson</code>包中的注解，主要用来控制<code>后端返回给前端</code>的日期格式，通常用在返回给前端的实体类中。<br /> 案例如下：</p> <pre><code class="prism language-java"><span class="token keyword">class</span><span class="token class-name">User</span><span class="token punctuation">{<!-- --></span><span class="token keyword">private</span><span class="token class-name">Integer</span> id<span class="token punctuation">;</span><span class="token annotation punctuation">@JsonFormat</span><span class="token punctuation">(</span>pattern<span class="token operator">=</span>”yyyy<span class="token operator">-</span>MM<span class="token operator">-</span>dd”<span class="token punctuation">,</span>timezone<span class="token operator">=</span>”GMT<span class="token operator">+</span><span class="token number">8</span>”<span class="token punctuation">)</span><span class="token keyword">private</span><span class="token class-name">Date</span> birthday<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <p>注意：<br /> 如果直接使用 @JsonFormat(pattern=”yyyy-MM-dd”)就会出现2018-08-01 08:00:00的情况， 会相差8个小时，因为我们是东八区（北京时间）。所以我们在格式化的时候要指定时区（timezone ）</p> </h1> <p>该注解来源于阿里巴巴的fastjson,是阿里巴巴的开源框架，主要进行JSON解析和序列化。 @JsonField是<strong>集前端到后端、后端到前端数据传输于一身的注解</strong><br /> 其中经常用到的参数有以下：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221201/0b08c63658ea6842c009d43431053d78.jpg" alt="常用注解@JsonField、@JsonFormat、@DateTimeFormat区别"><br /> 所以JsonField中format属性功能可以代替JsonFormat了。<br /> 更多关于@JsonField的用法可以查看我的另一篇博客博客，这里就不再讲解<br /><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/qq_56769991/article/details/125981320?spm=1001.2014.3001.5501"  rel="nofollow">fastjson使用方法</a></p> </h1> <p>是spring自带的处理框架，主要用于将时间格式化。<br /> 在实体类上的注解使用，可以按格式处理<strong>前端传过来</strong>的日期</p> <pre><code class="prism language-java"><span class="token annotation punctuation">@DateTimeFormat</span><span class="token punctuation">(</span>pattern<span class="token operator">=</span>”yyyy<span class="token operator">-</span>MM<span class="token operator">-</span>dd”<span class="token punctuation">)</span><span class="token keyword">private</span><span class="token class-name">Date</span> date<span class="token punctuation">;</span></code></pre> </h1> <p>@DateTimeFormat是前端数据到后端数据的处理<br /> @JsonFormat是后端到前端数据的处理<br /> @JsonField是集两者于一身的一个注解</p> <p>综上所述，更建议使用@JsonField</p> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-63664.htm">Java权限修饰符</a></p>
+                                        <p>下一个：<a href="/news/article-64282.htm">开宠物店会血本无归吗（开宠物店会血本无归吗）</a></p>
                                     </div>
                                     </div>
                     <div class="col-md-3">
@@ -111,16 +112,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-63665.htm" title="常用注解@JsonField、@JsonFormat、@DateTimeFormat区别">常用注解@JsonField、@JsonFormat、@DateTimeFormat区别</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-2-25-free-v2ray-subscribe.htm" title="VPN安卓 | 2月25日21.8M/S|免费V2ray/Shadowrocket/Clash/SSR免费节点订阅分享">VPN安卓 | 2月25日21.8M/S|免费V2ray/Shadowrocket/Clash/SSR免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/news/article-63074.htm" title="Spring的两种依赖注入方式:setter方法注入与构造方法注入">Spring的两种依赖注入方式:setter方法注入与构造方法注入</a></li>
-                        <li class="py-2"><a href="/news/article-62477.htm" title="tf.keras.layers.Conv1D和tf.keras.layers.Conv1DTranspose">tf.keras.layers.Conv1D和tf.keras.layers.Conv1DTranspose</a></li>
                         <li class="py-2"><a href="/news/article-61882.htm" title="预制菜料理包十大排行">预制菜料理包十大排行</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-2-26-node-share-links.htm" title="VPN安卓 | 2月26日22.3M/S|免费Shadowrocket/SSR/V2ray/Clash免费节点订阅分享">VPN安卓 | 2月26日22.3M/S|免费Shadowrocket/SSR/V2ray/Clash免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-64282.htm" title="开宠物店会血本无归吗（开宠物店会血本无归吗）">开宠物店会血本无归吗（开宠物店会血本无归吗）</a></li>
+                        <li class="py-2"><a href="/news/article-63665.htm" title="常用注解@JsonField、@JsonFormat、@DateTimeFormat区别">常用注解@JsonField、@JsonFormat、@DateTimeFormat区别</a></li>
+                        <li class="py-2"><a href="/news/article-62477.htm" title="tf.keras.layers.Conv1D和tf.keras.layers.Conv1DTranspose">tf.keras.layers.Conv1D和tf.keras.layers.Conv1DTranspose</a></li>
                         <li class="py-2"><a href="/news/article-63075.htm" title="微服务架构学习与思考(09)：分布式链路追踪系统-dapper论文学习">微服务架构学习与思考(09)：分布式链路追踪系统-dapper论文学习</a></li>
-                        <li class="py-2"><a href="/news/article-62478.htm" title="Vue结合ElementUI上传Base64编码后的图片实例_vue.js">Vue结合ElementUI上传Base64编码后的图片实例_vue.js</a></li>
-                        <li class="py-2"><a href="/news/article-63664.htm" title="Java权限修饰符">Java权限修饰符</a></li>
+                        <li class="py-2"><a href="/news/article-63074.htm" title="Spring的两种依赖注入方式:setter方法注入与构造方法注入">Spring的两种依赖注入方式:setter方法注入与构造方法注入</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-27-free-node-subscribe-links.htm" title="VPN安卓 | 2月27日22.6M/S|免费Clash/SSR/V2ray/Shadowrocket免费节点订阅分享">VPN安卓 | 2月27日22.6M/S|免费Clash/SSR/V2ray/Shadowrocket免费节点订阅分享</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-2-24-free-node-subscribe-links.htm" title="VPN安卓 | 2月24日18M/S|免费Clash/Shadowrocket/SSR/V2ray免费节点订阅分享">VPN安卓 | 2月24日18M/S|免费Clash/Shadowrocket/SSR/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-26-node-share-links.htm" title="VPN安卓 | 2月26日22.3M/S|免费Shadowrocket/SSR/V2ray/Clash免费节点订阅分享">VPN安卓 | 2月26日22.3M/S|免费Shadowrocket/SSR/V2ray/Clash免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-61883.htm" title="我喜欢实实在在的人的句子（风雨沙坡头电视剧）新鲜出炉，">我喜欢实实在在的人的句子（风雨沙坡头电视剧）新鲜出炉，</a></li>
                     </ul>
     </div>
 </div>
@@ -132,7 +133,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
             </li>
                     </ul>
     </div>
