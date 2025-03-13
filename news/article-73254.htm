@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnforandroid.github.io/news/article-73254.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>ClickHouse 对付单表上亿条记录分组查询秒出, OLAP应用秒杀其他数据库_在线工具</title>
+        <meta name="description" content="1.  启动并下载一个clickhouse-server, By default, starting above server instance will be run as default user" />
+        <link rel="icon" href="/assets/website/img/trojannode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN安卓 订阅机场节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnforandroid.github.io/news/article-73254.htm" />
+    <meta property="og:site_name" content="VPN安卓 订阅机场节点官网" />
+    <meta property="og:title" content="ClickHouse 对付单表上亿条记录分组查询秒出, OLAP应用秒杀其他数据库_在线工具" />
+    <meta property="og:image" content="https://vpnforandroid.github.io/uploads/20240807/7666e682f03bf32bc8594a6af8753b82.webp" />
+        <meta property="og:release_date" content="2025-03-13T09:23:18" />
+    <meta property="og:updated_time" content="2025-03-13T09:23:18" />
+        <meta property="og:description" content="1.  启动并下载一个clickhouse-server, By default, starting above server instance will be run as default user" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ClickHouse 对付单表上亿条记录分组查询秒出, OLAP应用秒杀其他数据库_在线工具">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/trojannode/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/trojannode/style.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XZJRB5RDTD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XZJRB5RDTD');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="/">
+                        <span class="logo">VPN安卓</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>ClickHouse 对付单表上亿条记录分组查询秒出, OLAP应用秒杀其他数据库_在线工具</h2>
+                    <ol>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li>正文</li>
+                    </ol>
+                </div>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<p>1.  启动并下载一个clickhouse-server, By default, starting above server instance will be run as default user without password.</p> <div class="cnblogs_code"> <pre>docker run -d --name ch-server --ulimit nofile=<span style="color: rgba(128, 0, 128, 1)">262144</span>:<span style="color: rgba(128, 0, 128, 1)">262144</span> -p <span style="color: rgba(128, 0, 128, 1)">8123</span>:<span style="color: rgba(128, 0, 128, 1)">8123</span> -p <span style="color: rgba(128, 0, 128, 1)">9000</span>:<span style="color: rgba(128, 0, 128, 1)">9000</span> -p <span style="color: rgba(128, 0, 128, 1)">9009</span>:<span style="color: rgba(128, 0, 128, 1)">9009</span> yandex/clickhouse-server<br>或者加一个Mount<br>docker run -d --name ch-server --ulimit nofile=262144:262144 -p 8123:8123 -p 9000:9000 -p 9009:9009  -v e:\\taobao:/usr/src/app/  yandex/clickhouse-server</pre> </div> <p>2. 打开浏览器, 输入, 查询结果就下载下来</p> <div class="cnblogs_code"> <pre>http:<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">localhost:8123/?query=SELECT%20%27Hello,%20ClickHouse!%27</span></pre> </div> <p>3. 进入docker 的CLI, server端安装在/etc/clickhouse-server 目录      用clickhouse-client来执行客户端命令</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220507/81f6a635f57417c4d9d82c9eee6009e9.jpg" alt="ClickHouse 对付单表上亿条记录分组查询秒出, OLAP应用秒杀其他数据库_在线工具"></p> <p> 4. 通过csv导入数据, 把本地目录Mount 到/usr/src/app目录</p> <div class="cnblogs_code"> <pre>clickhouse-client --query=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">INSERT INTO tblSale FORMAT CSV</span><span style="color: rgba(128, 0, 0, 1)">'</span> &lt; /usr/src/app/tblsale_in.csv</pre> </div> <p>csv必须是逗号分隔,而且DateTime格式必须是不带毫秒的, 不然会有下面的错误</p> <div class="cnblogs_code"> <pre>clickhouse-client --query=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">INSERT INTO tblSale FORMAT CSV</span><span style="color: rgba(128, 0, 0, 1)">'</span> &lt; /usr/src/app/<span style="color: rgba(0, 0, 0, 1)">tblsale_in.csv# Code: </span><span style="color: rgba(128, 0, 128, 1)">117</span>. DB::Exception: Expected end of line: (at row <span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">)  Row </span><span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">: Column </span><span style="color: rgba(128, 0, 128, 1)">0</span>,   name: id,          type: UInt32,   parsed text: <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">1</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)"> Column </span><span style="color: rgba(128, 0, 128, 1)">1</span>,   name: prod_id,     type: UInt32,   parsed text: <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">1</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)"> Column </span><span style="color: rgba(128, 0, 128, 1)">2</span>,   name: user_id,     type: UInt32,   parsed text: <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">1</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)"> Column </span><span style="color: rgba(128, 0, 128, 1)">3</span>,   name: cnt,         type: UInt32,   parsed text: <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">1</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)"> Column </span><span style="color: rgba(128, 0, 128, 1)">4</span>,   name: total_price, type: Float32,  parsed text: <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">1.00</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)"> Column </span><span style="color: rgba(128, 0, 128, 1)">5</span>,   name: date,        type: DateTime, parsed text: <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">2022-04-22 17:56:00</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)"> ERROR: garbage after DateTime: </span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">.783&lt;CARRIAGE RETURN&gt;&lt;LINE FEED&gt;2,2,</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)"> ERROR: <span style="color: rgba(255, 0, 0, 1)"><strong>DateTime must be </strong></span></span><span style="color: rgba(255, 0, 0, 1)"><strong>in YYYY-MM-DD hh:mm:ss or NNNNNNNNNN (unix timestamp, exactly 10</strong></span><span style="color: rgba(0, 0, 0, 1)"><span style="color: rgba(255, 0, 0, 1)"><strong> digits) format.</strong></span>  : While executing CSVRowInputFormat: data </span><span style="color: rgba(0, 0, 255, 1)">for</span> INSERT was parsed <span style="color: rgba(0, 0, 255, 1)">from</span> stdin: (<span style="color: rgba(0, 0, 255, 1)">in</span> query: INSERT INTO tblSale FORMAT CSV). (INCORRECT_DATA)</pre> </div> <p>我的数据是从SQLServer导出的, 可以用BCP导出指定逗号分隔</p> <div class="cnblogs_code"> <pre>bcp <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">SELECT  [id],[prod_id],[user_id] ,[cnt],[total_price],Convert(varchar(20) , date, 120) as date FROM [taobao].[dbo].[tblSale_in]</span><span style="color: rgba(128, 0, 0, 1)">"</span> queryout tblSale_in.csv -c -t , -T -S .\SQLExpress</pre> </div> <p> </p> <p>当我导入的csv数据量很少时, 很快就成功了, 我再用有200w条数据时的csv, 执行这条命令是感觉就没有反应了.新打开一个CLI,进入 clickhouse-client 也没有反应了,不知道是否死掉了</p> <p>等待5分种后,出现这个错误, </p> <div class="cnblogs_code"> <pre>Code: <span style="color: rgba(128, 0, 128, 1)">209</span>. DB::NetException: Timeout exceeded <span style="color: rgba(0, 0, 255, 1)">while</span> reading <span style="color: rgba(0, 0, 255, 1)">from</span> socket (<span style="color: rgba(128, 0, 128, 1)">127.0</span>.<span style="color: rgba(128, 0, 128, 1)">0.1</span>:<span style="color: rgba(128, 0, 128, 1)">9000</span>, <span style="color: rgba(128, 0, 128, 1)">300000</span> ms). (SOCKET_TIMEOUT)</pre> </div> <p> 但是第2天再导入的时候就算导入2000w数据也很快, 在1分钟以内, 不知道什么原因</p> <p> </p> <p>=========================以下是ClickHouse和SQLServer 2012的性能对比=====================================</p> <p>硬件: THINKPAD470, I5CPU,8G内存,机械硬盘</p> <div class="cnblogs_code"> <pre>--<span style="color: rgba(0, 0, 0, 1)">统计每日销量，2000w数据 SQLServer 17秒   SELECT Convert(varchar(</span><span style="color: rgba(128, 0, 128, 1)">8</span>) , date, <span style="color: rgba(128, 0, 128, 1)">112</span>) <span style="color: rgba(0, 0, 255, 1)">as</span> date,count(*) <span style="color: rgba(0, 0, 255, 1)">as</span><span style="color: rgba(0, 0, 0, 1)"> dayCnt   FROM [taobao].[dbo].[tblSale] group by Convert(varchar(</span><span style="color: rgba(128, 0, 128, 1)">8</span>) , date, <span style="color: rgba(128, 0, 128, 1)">112</span><span style="color: rgba(0, 0, 0, 1)">)    order by  Convert(varchar(</span><span style="color: rgba(128, 0, 128, 1)">8</span>) , date, <span style="color: rgba(128, 0, 128, 1)">112</span>) </pre> </div> <div class="cnblogs_code"> <pre>--<span style="color: rgba(0, 0, 0, 1)">按日统计数量, ClickHouse 2500w数据第一次用时8.35秒,第二次用时0.3秒 SELECT toYYYYMMDD(date), count(</span>*) <span style="color: rgba(0, 0, 255, 1)">as</span><span style="color: rgba(0, 0, 0, 1)"> dayCnt  FROM tblSale  group by toYYYYMMDD(date) order by toYYYYMMDD(date)</span></pre> </div> <p>继续导入2000w数据, 再用上面的SQL, clickhouse 4500w数据用时0.58秒, 6000w数据用时0.5秒 (第一次查询用1.24秒), 8000w数据用时0.68秒,1亿数据用时0.95秒</p> <p>=================== 结论==================================</p> <p>对于一般OLAP应用, 比如查用户的历史记录, 不要去搞分库分表, 那是条歪路,还是转到列数据库, 搞个大宽表, 尽量不要用Join, 单机都能达到这么高的性能.</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-72587.htm">最简颗粒狗粮制作方法是什么（颗粒狗粮制作方法配方大全）</a></p>
+                                        <p>下一个：<a href="/news/article-73255.htm">宠物猫多长时间驱虫一次比较好（家养宠物猫多久驱虫一次）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-71267.htm" title="开一家宠物食品店怎么样 开一家宠物食品店怎么样呢">开一家宠物食品店怎么样 开一家宠物食品店怎么样呢</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-3-node-share.htm" title="VPN安卓 | 3月3日20.7M/S|免费Shadowrocket/Clash/SSR/V2ray免费节点订阅分享">VPN安卓 | 3月3日20.7M/S|免费Shadowrocket/Clash/SSR/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-25-free-v2ray-subscribe.htm" title="VPN安卓 | 2月25日21.8M/S|免费V2ray/Shadowrocket/Clash/SSR免费节点订阅分享">VPN安卓 | 2月25日21.8M/S|免费V2ray/Shadowrocket/Clash/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-66122.htm" title="宠物猫疫苗种类（宠物猫疫苗品牌排行榜）">宠物猫疫苗种类（宠物猫疫苗品牌排行榜）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-12-free-v2ray-subscribe.htm" title="VPN安卓 | 3月12日18.3M/S|免费Clash/V2ray/Shadowrocket/SSR免费节点订阅分享">VPN安卓 | 3月12日18.3M/S|免费Clash/V2ray/Shadowrocket/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-10-node-share-links.htm" title="VPN安卓 | 3月10日18.5M/S|免费Clash/Shadowrocket/V2ray/SSR免费节点订阅分享">VPN安卓 | 3月10日18.5M/S|免费Clash/Shadowrocket/V2ray/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-68009.htm" title="附近免费领狗狗在哪里（附近有没有免费的狗狗领）">附近免费领狗狗在哪里（附近有没有免费的狗狗领）</a></li>
+                        <li class="py-2"><a href="/news/article-71936.htm" title="免费宠物领养平台哪个好一点呢知乎（免费宠物领养平台哪个好一点呢知乎文章）">免费宠物领养平台哪个好一点呢知乎（免费宠物领养平台哪个好一点呢知乎文章）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-11-free-v2ray-subscribe.htm" title="VPN安卓 | 3月11日19.3M/S|免费Shadowrocket/Clash/SSR/V2ray免费节点订阅分享">VPN安卓 | 3月11日19.3M/S|免费Shadowrocket/Clash/SSR/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-1-free-subscribe-node.htm" title="VPN安卓 | 3月1日21.5M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅分享">VPN安卓 | 3月1日21.5M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">39</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container d-md-flex py-4">
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <a href="/">VPN安卓 订阅机场节点官网</a> 版权所有 Powered by WordPress
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/trojannode/jquery-1.9.1.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/purecounter/purecounter.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/swiper/swiper-bundle.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/trojannode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
