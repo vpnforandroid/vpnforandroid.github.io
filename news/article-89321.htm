@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnforandroid.github.io/news/article-89321.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>HTML5 Canvas 水流样式 Loading 动画</title>
+        <meta name="description" content="今天我们要分享另外一款基于HTML5 Canvas的液体流动样式Loading加载动画，这款Loading动画在加载时会呈现液体流动的动画效果，并且由于和背景颜色的对比，也略微呈现发光的动画效果。 效" />
+        <link rel="icon" href="/assets/website/img/trojannode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN安卓 订阅机场节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnforandroid.github.io/news/article-89321.htm" />
+    <meta property="og:site_name" content="VPN安卓 订阅机场节点官网" />
+    <meta property="og:title" content="HTML5 Canvas 水流样式 Loading 动画" />
+    <meta property="og:image" content="https://vpnforandroid.github.io/uploads/20240807/ff0ebe3906840a9e154cb1487cffd99b.webp" />
+        <meta property="og:release_date" content="2025-04-05T08:21:37" />
+    <meta property="og:updated_time" content="2025-04-05T08:21:37" />
+        <meta property="og:description" content="今天我们要分享另外一款基于HTML5 Canvas的液体流动样式Loading加载动画，这款Loading动画在加载时会呈现液体流动的动画效果，并且由于和背景颜色的对比，也略微呈现发光的动画效果。 效" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="HTML5 Canvas 水流样式 Loading 动画">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/trojannode/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/trojannode/style.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XZJRB5RDTD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XZJRB5RDTD');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="/">
+                        <span class="logo">VPN安卓</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>HTML5 Canvas 水流样式 Loading 动画</h2>
+                    <ol>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li>正文</li>
+                    </ol>
+                </div>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<p>今天我们要分享另外一款基于HTML5 Canvas的液体流动样式Loading加载动画，这款Loading动画在加载时会呈现液体流动的动画效果，并且由于和背景颜色的对比，也略微呈现发光的动画效果。</p> <h2 id="效果预览">效果预览</h2> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/f34da28fe67b499df076a407886548ae.jpg" alt="HTML5 Canvas 水流样式 Loading 动画"></p> <h2 id="代码实现">代码实现</h2> <p><strong>HTML代码</strong></p> <p>接下来我们讲讲实现这个加载动画的大致思路和实现过程。</p> <p>首先在页面上定义一个<code>canvas</code>元素，用来承载这个Loading动画的画布。</p> <pre><code class="language-html">&lt;canvas id='canvas'&gt;&lt;/canvas&gt;</code></pre> <p>接下拉需要定义一个SVG滤镜，这个滤镜用来渲染Loading圈圈粒子化的效果。</p> <pre><code class="language-html">&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;     &lt;defs&gt;         &lt;filter id="shadowed-goo"&gt;              &lt;feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" /&gt;              &lt;feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" /&gt;              &lt;feGaussianBlur in="goo" stdDeviation="3" result="shadow" /&gt;              &lt;feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" /&gt;              &lt;feOffset in="shadow" dx="1" dy="1" result="shadow" /&gt;              &lt;feBlend in2="shadow" in="goo" result="goo" /&gt;              &lt;feBlend in2="goo" in="SourceGraphic" result="mix" /&gt;         &lt;/filter&gt;         &lt;filter id="goo"&gt;              &lt;feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" /&gt;              &lt;feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" /&gt;              &lt;feBlend in2="goo" in="SourceGraphic" result="mix" /&gt;         &lt;/filter&gt;     &lt;/defs&gt; &lt;/svg&gt;</code></pre> <p><strong>CSS代码</strong></p> <p>这里我们先不谈页面中其他元素的样式，我们的重点是为<code>canvas</code>元素指定相应的svg滤镜：</p> <pre><code class="language-css">#canvas { 	margin: 0px auto; 	display: block; 	filter: url("#shadowed-goo"); }</code></pre> <p><strong>JavaScript代码</strong></p> <p>然后用JavaScript代码实现Loading加载动画。这里用到了<code>canvas</code>的2d动画绘制对象：</p> <pre><code class="language-javascript">var canvas = document.getElementById("canvas"); var ctx = canvas.getContext("2d");</code></pre> <p><code>getContext()</code>方法可返回一个对象，该对象提供了用于在画布上绘图的方法和属性。</p> <p>这个动画的核心是动态画一段弧线，代码如下：</p> <pre><code class="language-javascript">ctx.fillStyle = "rgba(255,255,255," + this.al + ")"; ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false); ctx.fill();</code></pre> <p>下面是完整的JS代码：</p> <pre><code class="language-javascript">var canvas = document.getElementById("canvas"); var ctx = canvas.getContext("2d"); var p = []; var particle = []; var angle = Math.PI/4; canvas.width = 600; canvas.height = 600; var width = canvas.width; var height = canvas.height;  function getRandomInt(min, max) { 	return min + Math.floor(Math.random() * (max - min + 1)); }  function retinaReady() { 	var pixelRatio = window.devicePixelRatio || 1; 	var backingStore = ctx.webkitBackingStorePixelRatio || 1; 	window.ratio = pixelRatio / backingStore; // public var 	if (pixelRatio !== backingStore) { 		var oldWidth = canvas.width; 		var oldHeight = canvas.height; 		canvas.width = oldWidth * ratio; 		canvas.height = oldHeight * ratio; 		canvas.style.width = oldWidth + "px"; 		canvas.style.height = oldHeight + "px"; 		ctx.scale(window.ratio, window.ratio); 	} } retinaReady(); function run(a) { 	var r = 140; 	var x = r * Math.sin(a) + width / 2; 	var y = r * Math.cos(a) + ((height / 2)-80); 	var p; 	p = new Particle(x, y); 	particle.push(p); }  function Particle(x, y) { 	this.x = x; 	this.y = y; 	this.r = getRandomInt(10, 16); 	this.v = { 		x: 0, 		y: 0 	}; 	this.a = { 		x: 0, 		y: 0 	}; 	this.al = 1; }  Particle.prototype.update = function() { 	this.a.x = getRandomInt(-0.001, 0.001); 	this.a.y = getRandomInt(0.01, 0.02); 	this.v.x += this.a.x; 	this.v.y += this.a.y; 	this.x += this.v.x; 	this.y += this.v.y;  	if (this.r &gt;= 0.01) { 		this.r -= 0.2; 		this.al -= 0.001; 	} else { 		this.r = 0; 		this.al = 0; 	} };  Particle.prototype.draw = function() { 	ctx.fillStyle = "rgba(255,255,255," + this.al + ")"; 	ctx.beginPath(); 	ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false); 	ctx.fill(); };  function animate() { 	ctx.clearRect(0, 0, width, height); 	run(angle); 	requestAnimationFrame(animate); 	for (var j = 0; j &lt; particle.length; j++) { 		var p = particle[j]; 		p.update(); 		p.draw(); 	}  	if (angle &lt;= 2 * Math.PI) { 		angle += 0.04; 	} else { 		angle = 0; 	} } animate();</code></pre> <p>到这里为止，这个粒子流体状的Loading加载动画就完成了，文章最后也将源码献给大家。</p> <p>代码仅供参考和学习，请不要用于商业用途。</p> <h2 id="最后总结">最后总结</h2> <p>这个Loading动画我们主要用到了SVG滤镜知识，以及HTML5 Canvas的2d动画绘制对象，结合简单的数学三角函数组合，如果你觉得不错，点个赞吧！</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-88600.htm">上海宠物领养平台南平地址查询 上海宠物领养平台南平地址查询电话</a></p>
+                                        <p>下一个：<a href="/news/article-89322.htm">宠物粮食代理需要多少钱一个月工资（怎么做宠物粮代理）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-84996.htm" title="三国杀角色台词语音为什么没有（三国杀其他角色语音）">三国杀角色台词语音为什么没有（三国杀其他角色语音）</a></li>
+                        <li class="py-2"><a href="/news/article-84278.htm" title="宠物粮食加工厂设备哪的好一点呢视频（小型宠物粮加工厂需要什么手续）">宠物粮食加工厂设备哪的好一点呢视频（小型宠物粮加工厂需要什么手续）</a></li>
+                        <li class="py-2"><a href="/news/article-83561.htm" title="猫粮利润率多少合理（猫粮的利润率）">猫粮利润率多少合理（猫粮的利润率）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-9-free-node-subscribe.htm" title="VPN安卓 | 3月9日21.2M/S|免费SSR/V2ray/Shadowrocket/Clash免费节点订阅分享">VPN安卓 | 3月9日21.2M/S|免费SSR/V2ray/Shadowrocket/Clash免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-78677.htm" title="长沙宠物领养救助站电话 长沙宠物领养救助站电话号码">长沙宠物领养救助站电话 长沙宠物领养救助站电话号码</a></li>
+                        <li class="py-2"><a href="/news/article-80056.htm" title="学校门口暴利生意（学校门口暴利生意农业大楼）">学校门口暴利生意（学校门口暴利生意农业大楼）</a></li>
+                        <li class="py-2"><a href="/news/article-71936.htm" title="免费宠物领养平台哪个好一点呢知乎（免费宠物领养平台哪个好一点呢知乎文章）">免费宠物领养平台哪个好一点呢知乎（免费宠物领养平台哪个好一点呢知乎文章）</a></li>
+                        <li class="py-2"><a href="/news/article-70615.htm" title="开宠物诊所向哪个部门申请动物诊疗许可证书呢（办个宠物诊所证需要哪些材料）">开宠物诊所向哪个部门申请动物诊疗许可证书呢（办个宠物诊所证需要哪些材料）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-20-node-share-links.htm" title="VPN安卓 | 3月20日18.2M/S|免费Shadowrocket/Clash/V2ray/SSR免费节点订阅分享">VPN安卓 | 3月20日18.2M/S|免费Shadowrocket/Clash/V2ray/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-73918.htm" title="宠物医院乱收费!打什么电话可以投诉（宠物医院乱收费!打什么电话可以投诉他）">宠物医院乱收费!打什么电话可以投诉（宠物医院乱收费!打什么电话可以投诉他）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container d-md-flex py-4">
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <a href="/">VPN安卓 订阅机场节点官网</a> 版权所有 Powered by WordPress
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/trojannode/jquery-1.9.1.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/purecounter/purecounter.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/swiper/swiper-bundle.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/trojannode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
