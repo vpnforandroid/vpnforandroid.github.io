@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnforandroid.github.io/news/article-90813.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>SpringMVC对Ajax请求的处理</title>
+        <meta name="description" content="SpringMVC对Ajax请求的处理 [1] 问题:  当浏览器发起一个ajax请求给服务器，服务器调用对应的单元方法处理ajax请求。 而ajax的请求在被处理完成后，其处理结果需要直接响应。而目" />
+        <link rel="icon" href="/assets/website/img/trojannode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN安卓 订阅机场节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnforandroid.github.io/news/article-90813.htm" />
+    <meta property="og:site_name" content="VPN安卓 订阅机场节点官网" />
+    <meta property="og:title" content="SpringMVC对Ajax请求的处理" />
+    <meta property="og:image" content="https://vpnforandroid.github.io/uploads/20240807/51b7f1f08e1a228fb27e11ded22d1e42.webp" />
+        <meta property="og:release_date" content="2025-04-07T09:03:55" />
+    <meta property="og:updated_time" content="2025-04-07T09:03:55" />
+        <meta property="og:description" content="SpringMVC对Ajax请求的处理 [1] 问题:  当浏览器发起一个ajax请求给服务器，服务器调用对应的单元方法处理ajax请求。 而ajax的请求在被处理完成后，其处理结果需要直接响应。而目" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="SpringMVC对Ajax请求的处理">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/trojannode/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/trojannode/style.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XZJRB5RDTD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XZJRB5RDTD');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="/">
+                        <span class="logo">VPN安卓</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>SpringMVC对Ajax请求的处理</h2>
+                    <ol>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li>正文</li>
+                    </ol>
+                </div>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <h2><a id="SpringMVCAjax_0" rel="nofollow"></a>SpringMVC对Ajax请求的处理</h2> <p>[1] 问题:</p> <blockquote> <p>当浏览器发起一个ajax请求给服务器，服务器调用对应的单元方法处理ajax请求。<br /> 而ajax的请求在被处理完成后，其处理结果需要直接响应。而目前我们在单元方 法中响应ajax请求，使用的是response对象，需要我们自己将要响应的数据转换 为json字符串响应，比较麻烦，而我们一直希望在单元方法中无论是否是ajax请求，都使用return语句来完成资源的响应，怎么办？</p> </blockquote> <p>[2] 解决:</p> <blockquote> <p>既然我们希望使用单元方法的返回值来响应ajax请求的处理结果，而目前 DispatcherServlet的底层会将单元方法的返回值按照请求转发或者重定向来处理，所以就需要我们告诉DispatcherServlet，单元方法的返回值不要按照请求转发或者重定向处理，而是按照直接响应处理，将单元方法的返回值直接响应给浏览器。</p> </blockquote> <p>[3] 代码示例:</p> <ol> <li> <p>导入jackson的jar<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220902/a3358e08ae20344ffcfe391290d2d55e.jpg" alt="SpringMVC对Ajax请求的处理"></p> </li> <li> <p>声明单元方法处理ajax请求，并在单元方法上新增注解@ResponseBody<br /> 注意：<br /> 把我们要响应的数据直接return即可，并且，返回值类型为要return<br /> 的数据类型。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220902/e108fe1734d69bc47b6a902ff8cd0393.jpg" alt="SpringMVC对Ajax请求的处理"></p> </li> <li> <p>在ajax的回调函数中，，无需再次使用eval函数将响应数据转换为json对象<br /> 直接使用即可。</p> </li> </ol> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220902/7e0caf9b00052b40fcc16d7941309e5f.jpg" alt="SpringMVC对Ajax请求的处理"></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-90067.htm">ASP.NET Core WebApi返回结果统一包装实践</a></p>
+                                        <p>下一个：<a href="/news/article-90814.htm">宠物犬免费领养平台（宠物犬免费领养平台官网）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-69315.htm" title="到底什么是消息队列">到底什么是消息队列</a></li>
+                        <li class="py-2"><a href="/news/article-89322.htm" title="宠物粮食代理需要多少钱一个月工资（怎么做宠物粮代理）">宠物粮食代理需要多少钱一个月工资（怎么做宠物粮代理）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-2-free-v2ray.htm" title="VPN安卓 | 3月2日20.4M/S|免费Clash/SSR/V2ray/Shadowrocket免费节点订阅分享">VPN安卓 | 3月2日20.4M/S|免费Clash/SSR/V2ray/Shadowrocket免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-73255.htm" title="宠物猫多长时间驱虫一次比较好（家养宠物猫多久驱虫一次）">宠物猫多长时间驱虫一次比较好（家养宠物猫多久驱虫一次）</a></li>
+                        <li class="py-2"><a href="/news/article-90066.htm" title="Eureka的配置项详解">Eureka的配置项详解</a></li>
+                        <li class="py-2"><a href="/news/article-84995.htm" title="狗狗寄养中心（狗狗寄养中心装修）">狗狗寄养中心（狗狗寄养中心装修）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-20-node-share-links.htm" title="VPN安卓 | 3月20日18.2M/S|免费Shadowrocket/Clash/V2ray/SSR免费节点订阅分享">VPN安卓 | 3月20日18.2M/S|免费Shadowrocket/Clash/V2ray/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-89321.htm" title="HTML5 Canvas 水流样式 Loading 动画">HTML5 Canvas 水流样式 Loading 动画</a></li>
+                        <li class="py-2"><a href="/news/article-80056.htm" title="学校门口暴利生意（学校门口暴利生意农业大楼）">学校门口暴利生意（学校门口暴利生意农业大楼）</a></li>
+                        <li class="py-2"><a href="/news/article-72587.htm" title="最简颗粒狗粮制作方法是什么（颗粒狗粮制作方法配方大全）">最简颗粒狗粮制作方法是什么（颗粒狗粮制作方法配方大全）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container d-md-flex py-4">
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <a href="/">VPN安卓 订阅机场节点官网</a> 版权所有 Powered by WordPress
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/trojannode/jquery-1.9.1.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/purecounter/purecounter.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/swiper/swiper-bundle.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/trojannode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
