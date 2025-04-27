@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnforandroid.github.io/news/article-105767.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>vue项目实现自定义tabBar组件的封装</title>
+        <meta name="description" content="首先感谢王红元老师的vue课程，从中受益良多。特别是在目录结构的划分、组件封装思想上受到了很大启发，下面为大家带来一个tabBar的组件封装。 一、创建一个存放公共组件的文件夹，里面再新建一个tabb" />
+        <link rel="icon" href="/assets/website/img/trojannode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN安卓 订阅机场节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnforandroid.github.io/news/article-105767.htm" />
+    <meta property="og:site_name" content="VPN安卓 订阅机场节点官网" />
+    <meta property="og:title" content="vue项目实现自定义tabBar组件的封装" />
+    <meta property="og:image" content="https://vpnforandroid.github.io/uploads/20240807/feb1809788d6d1afe7203e79821167b9.webp" />
+        <meta property="og:release_date" content="2025-04-27T08:30:29" />
+    <meta property="og:updated_time" content="2025-04-27T08:30:29" />
+        <meta property="og:description" content="首先感谢王红元老师的vue课程，从中受益良多。特别是在目录结构的划分、组件封装思想上受到了很大启发，下面为大家带来一个tabBar的组件封装。 一、创建一个存放公共组件的文件夹，里面再新建一个tabb" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="vue项目实现自定义tabBar组件的封装">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/trojannode/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/trojannode/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/trojannode/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XZJRB5RDTD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XZJRB5RDTD');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="/">
+                        <span class="logo">VPN安卓</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>vue项目实现自定义tabBar组件的封装</h2>
+                    <ol>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li>正文</li>
+                    </ol>
+                </div>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>首先感谢王红元老师的vue课程，从中受益良多。特别是在目录结构的划分、组件封装思想上受到了很大启发，下面为大家带来一个tabBar的组件封装。</p> <p>一、创建一个存放公共组件的文件夹，里面再新建一个tabbar的文件夹。里面创建两个.vue文件：TabBar.vue和TabBarItem.vue 如图：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230110/b79eed3aa9b1f6413733910306696939.jpg" alt="vue项目实现自定义tabBar组件的封装"><br /> 1、TabBar.vue代码展示：</p> <pre><code class="prism language-bash"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>   <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"tab-bar"</span><span class="token operator">&gt;</span>     <span class="token operator">&lt;</span>slot<span class="token operator">&gt;</span><span class="token operator">&lt;</span>/slot<span class="token operator">&gt;</span>   <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>/template<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>   <span class="token builtin class-name">export</span> default <span class="token punctuation">{<!-- --></span>     name: <span class="token string">"TabBar"</span>   <span class="token punctuation">}</span> <span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>style scoped<span class="token operator">&gt;</span>   .tab-bar<span class="token punctuation">{<!-- --></span>     width:100%<span class="token punctuation">;</span>     height: 49px<span class="token punctuation">;</span>     position: fixed<span class="token punctuation">;</span>     bottom: <span class="token number">0</span><span class="token punctuation">;</span>     left: <span class="token number">0</span><span class="token punctuation">;</span>     z-index: <span class="token number">500</span><span class="token punctuation">;</span>     display: flex<span class="token punctuation">;</span>     justify-content: space-around<span class="token punctuation">;</span>     background-color: white<span class="token punctuation">;</span>     border-top: 1px solid <span class="token comment">#f3f3f3</span>   <span class="token punctuation">}</span> <span class="token operator">&lt;</span>/style<span class="token operator">&gt;</span>  </code></pre> <p>2、TabBarItem.vue代码展示：</p> <pre><code class="prism language-bash"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>   <span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">"tab-bar-item"</span> :style<span class="token operator">=</span><span class="token string">"{color: defaultColor}"</span> @click<span class="token operator">=</span><span class="token string">"itemBind"</span><span class="token operator">&gt;</span>     <span class="token operator">&lt;</span>div v-if<span class="token operator">=</span><span class="token string">"!isActive"</span><span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>slot <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">"item-icon"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/slot<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span>div v-else<span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>slot <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">"item-icon-active"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/slot<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span>div :style<span class="token operator">=</span><span class="token string">"activeStyle"</span><span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>slot <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">"item-text"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/slot<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>   <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>/template<span class="token operator">&gt;</span>  <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>   <span class="token builtin class-name">export</span> default <span class="token punctuation">{<!-- --></span>     name: <span class="token string">"TabBarItem"</span>,     computed:<span class="token punctuation">{<!-- --></span>       <span class="token function-name function">isActive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> //激活当前路由对应的tab项样式         <span class="token builtin class-name">return</span> this.<span class="token variable">$route</span>.path.indexOf<span class="token punctuation">(</span>this.path<span class="token punctuation">)</span> <span class="token operator">!=</span> -1       <span class="token punctuation">}</span>,       <span class="token function-name function">activeStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>         <span class="token builtin class-name">return</span> this.isActive?<span class="token punctuation">{<!-- --></span>color:this.activeColor<span class="token punctuation">}</span>:<span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span>       <span class="token punctuation">}</span>     <span class="token punctuation">}</span>,     props:<span class="token punctuation">{<!-- --></span>       path:<span class="token punctuation">{<!-- --></span>         type:String,         default:<span class="token string">'/'</span>       <span class="token punctuation">}</span>,       activeColor: <span class="token punctuation">{<!-- --></span>         type:String,         default: <span class="token string">'#f96702'</span>       <span class="token punctuation">}</span>,       defaultColor:<span class="token punctuation">{<!-- --></span>         type: String,         default: <span class="token string">'#666'</span>       <span class="token punctuation">}</span>     <span class="token punctuation">}</span>,     methods:<span class="token punctuation">{<!-- --></span>       <span class="token function-name function">itemBind</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> //点击tabBar项跳转对应的路由         if<span class="token punctuation">(</span><span class="token operator">!</span>this.isActive<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>           this.<span class="token variable">$router</span>.replace<span class="token punctuation">(</span>this.path<span class="token punctuation">)</span>         <span class="token punctuation">}</span>       <span class="token punctuation">}</span>     <span class="token punctuation">}</span>   <span class="token punctuation">}</span> <span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>style scoped<span class="token operator">&gt;</span>   .tab-bar-item<span class="token punctuation">{<!-- --></span>     position: relative<span class="token punctuation">;</span>     display: flex<span class="token punctuation">;</span>     flex-direction: <span class="token function">column</span><span class="token punctuation">;</span>     justify-content: center<span class="token punctuation">;</span>     align-items: center<span class="token punctuation">;</span>     font-size: 13px   <span class="token punctuation">}</span>   .tab-bar-item img<span class="token punctuation">{<!-- --></span>     display: block<span class="token punctuation">;</span>     width: 25px<span class="token punctuation">;</span>     height: 25px<span class="token punctuation">;</span>     margin-bottom: 2px<span class="token punctuation">;</span>   <span class="token punctuation">}</span> <span class="token operator">&lt;</span>/style<span class="token operator">&gt;</span>  </code></pre> <p>二、创建一个MainTabBar.vue文件，用于导入上述组件，以及配置tabBar相关参数。代码展示：</p> <pre><code class="prism language-bash"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>   <span class="token operator">&lt;</span>tab-bar v-if<span class="token operator">=</span><span class="token string">"isShowTabbar"</span><span class="token operator">&gt;</span>     <span class="token operator">&lt;</span>tab-bar-item       v-for<span class="token operator">=</span><span class="token string">"item in tabBarArr"</span>       :path<span class="token operator">=</span><span class="token string">"item.path"</span>       :activeColor<span class="token operator">=</span><span class="token string">"activeColor"</span>       :defaultColor<span class="token operator">=</span><span class="token string">"defaultColor"</span>     <span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>template v-slot:item-icon<span class="token operator">&gt;</span>         <span class="token operator">&lt;</span>img :src<span class="token operator">=</span><span class="token string">"item.defaultIcon"</span><span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>/template<span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>template v-slot:item-icon-active<span class="token operator">&gt;</span>         <span class="token operator">&lt;</span>img :src<span class="token operator">=</span><span class="token string">"item.activeIcon"</span><span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>/template<span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>template v-slot:item-text<span class="token operator">&gt;</span>         <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">{<!-- --></span>item.name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>/template<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span>/tab-bar-item<span class="token operator">&gt;</span>   <span class="token operator">&lt;</span>/tab-bar<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>/template<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>   <span class="token function">import</span> TabBar from <span class="token string">'components/common/tabbar/TabBar'</span>   <span class="token function">import</span> TabBarItem from <span class="token string">'components/common/tabbar/TabBarItem'</span>   <span class="token builtin class-name">export</span> default <span class="token punctuation">{<!-- --></span>     name: <span class="token string">"MainTabBar"</span>,     components:<span class="token punctuation">{<!-- --></span>       TabBar,TabBarItem     <span class="token punctuation">}</span>,     <span class="token function-name function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>       return<span class="token punctuation">{<!-- --></span>         activeColor:<span class="token string">'#008cd6'</span>, //选中色         defaultColor:<span class="token string">'#8a8a8a'</span>, //默认色         tabBarArr:<span class="token punctuation">[</span>           <span class="token punctuation">{<!-- --></span>             path:<span class="token string">'/storelist'</span>,             name:<span class="token string">'加油闪付'</span>,             defaultIcon:require<span class="token punctuation">(</span><span class="token string">'assets/img/tabbar/flashPay.png'</span><span class="token punctuation">)</span>,             activeIcon:require<span class="token punctuation">(</span><span class="token string">'assets/img/tabbar/flashPayChoosed.png'</span><span class="token punctuation">)</span>           <span class="token punctuation">}</span>,           <span class="token punctuation">{<!-- --></span>             path:<span class="token string">'/equity'</span>,             name:<span class="token string">'车主权益'</span>,             defaultIcon:require<span class="token punctuation">(</span><span class="token string">'assets/img/tabbar/equity.png'</span><span class="token punctuation">)</span>,             activeIcon:require<span class="token punctuation">(</span><span class="token string">'assets/img/tabbar/equityChoosed.png'</span><span class="token punctuation">)</span>           <span class="token punctuation">}</span>,           <span class="token punctuation">{<!-- --></span>             path:<span class="token string">'/gasstation'</span>,             name:<span class="token string">'油站导航'</span>,             defaultIcon:require<span class="token punctuation">(</span><span class="token string">'assets/img/tabbar/navigation.png'</span><span class="token punctuation">)</span>,             activeIcon:require<span class="token punctuation">(</span><span class="token string">'assets/img/tabbar/navigationChoosed.png'</span><span class="token punctuation">)</span>           <span class="token punctuation">}</span>,           <span class="token punctuation">{<!-- --></span>             path:<span class="token string">'/profile'</span>,             name:<span class="token string">'个人中心'</span>,             defaultIcon:require<span class="token punctuation">(</span><span class="token string">'assets/img/tabbar/customerCenter.png'</span><span class="token punctuation">)</span>,             activeIcon:require<span class="token punctuation">(</span><span class="token string">'assets/img/tabbar/customerCenterChoosed.png'</span><span class="token punctuation">)</span>           <span class="token punctuation">}</span>         <span class="token punctuation">]</span>       <span class="token punctuation">}</span>     <span class="token punctuation">}</span>,     computed:<span class="token punctuation">{<!-- --></span>       // 控制非tab页隐藏tab导航       <span class="token function-name function">isShowTabbar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>         <span class="token builtin class-name">return</span> this.tabBarArr.map<span class="token punctuation">(</span>val<span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span>return val<span class="token punctuation">[</span><span class="token string">'path'</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>.includes<span class="token punctuation">(</span>this.<span class="token variable">$route</span>.path<span class="token punctuation">)</span>       <span class="token punctuation">}</span>     <span class="token punctuation">}</span>   <span class="token punctuation">}</span> <span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>  </code></pre> <p>三、导入组件<br /> 在App.vue文件中导入MainTabBar.vue组件;<br /> 然后调用即可;<br /> 至此tabBar的底部导航组件封装完成;</p> <p>达到的功能：可配置默认色、激活色、图标、路由。</p> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-105120.htm">情侣名牌手表有哪些(情侣表十大名牌排行榜)</a></p>
+                                        <p>下一个：<a href="/news/article-105771.htm">广州宠物领养中心有哪些地址和电话（广州宠物猫领养中心）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-70615.htm" title="开宠物诊所向哪个部门申请动物诊疗许可证书呢（办个宠物诊所证需要哪些材料）">开宠物诊所向哪个部门申请动物诊疗许可证书呢（办个宠物诊所证需要哪些材料）</a></li>
+                        <li class="py-2"><a href="/news/article-71267.htm" title="开一家宠物食品店怎么样 开一家宠物食品店怎么样呢">开一家宠物食品店怎么样 开一家宠物食品店怎么样呢</a></li>
+                        <li class="py-2"><a href="/news/article-102657.htm" title="宠物店寄养协议书模板（宠物店寄养协议书模板怎么写）">宠物店寄养协议书模板（宠物店寄养协议书模板怎么写）</a></li>
+                        <li class="py-2"><a href="/news/article-93774.htm" title="旋转矩阵与欧拉角的相互转换">旋转矩阵与欧拉角的相互转换</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-29-free-v2ray-subscribe.htm" title="VPN安卓 | 3月29日23M/S|免费Clash/V2ray/SSR/Shadowrocket免费节点订阅分享">VPN安卓 | 3月29日23M/S|免费Clash/V2ray/SSR/Shadowrocket免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-20-free-node-subscribe-links.htm" title="VPN安卓 | 4月20日20.5M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅分享">VPN安卓 | 4月20日20.5M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-7-free-node-subscribe-links.htm" title="VPN安卓 | 4月7日19.6M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅分享">VPN安卓 | 4月7日19.6M/S|免费Clash/SSR/Shadowrocket/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-75951.htm" title="宠物粮食加工厂设备有哪些品牌好一点 宠物粮食加工厂设备有哪些品牌好一点的">宠物粮食加工厂设备有哪些品牌好一点 宠物粮食加工厂设备有哪些品牌好一点的</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-16-clash-v2ray-ss-ssr.htm" title="VPN安卓 | 4月16日18.7M/S|免费V2ray/Clash/Shadowrocket/SSR免费节点订阅分享">VPN安卓 | 4月16日18.7M/S|免费V2ray/Clash/Shadowrocket/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-66756.htm" title="全国十大名牌兽药厂有哪些（全国十大名牌兽药厂有哪些品种）">全国十大名牌兽药厂有哪些（全国十大名牌兽药厂有哪些品种）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">81</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container d-md-flex py-4">
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <a href="/">VPN安卓 订阅机场节点官网</a> 版权所有 Powered by WordPress
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/trojannode/jquery-1.9.1.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/purecounter/purecounter.js"></script>
+    <script src="/assets/website/js/frontend/trojannode/swiper/swiper-bundle.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/trojannode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
