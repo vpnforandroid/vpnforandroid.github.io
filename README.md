@@ -1,4 +1,4 @@
-# VPN安卓 | 10月3日19.3M/S|免费Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点免费节点订阅分享  更新时间 2026-10-03 12:13:20
+# VPN安卓 | 10月10日21.7M/S|免费Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点免费节点订阅分享  更新时间 2026-10-10 10:38:23
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://vpnforandroid.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://vpnforandroid.github.io/uploads/2026/10/0-20261003.yaml
-- https://vpnforandroid.github.io/uploads/2026/10/1-20261003.yaml
-- https://vpnforandroid.github.io/uploads/2026/10/2-20261003.yaml
-- https://vpnforandroid.github.io/uploads/2026/10/3-20261003.yaml
-- https://vpnforandroid.github.io/uploads/2026/10/4-20261003.yaml
+- https://vpnforandroid.github.io/uploads/2026/10/0-20261010.yaml
+- https://vpnforandroid.github.io/uploads/2026/10/1-20261010.yaml
+- https://vpnforandroid.github.io/uploads/2026/10/2-20261010.yaml
+- https://vpnforandroid.github.io/uploads/2026/10/3-20261010.yaml
+- https://vpnforandroid.github.io/uploads/2026/10/4-20261010.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://vpnforandroid.github.io/uploads/2026/10/0-20261003.txt
-- https://vpnforandroid.github.io/uploads/2026/10/1-20261003.txt
-- https://vpnforandroid.github.io/uploads/2026/10/2-20261003.txt
-- https://vpnforandroid.github.io/uploads/2026/10/3-20261003.txt
-- https://vpnforandroid.github.io/uploads/2026/10/4-20261003.txt
+- https://vpnforandroid.github.io/uploads/2026/10/0-20261010.txt
+- https://vpnforandroid.github.io/uploads/2026/10/1-20261010.txt
+- https://vpnforandroid.github.io/uploads/2026/10/2-20261010.txt
+- https://vpnforandroid.github.io/uploads/2026/10/3-20261010.txt
+- https://vpnforandroid.github.io/uploads/2026/10/4-20261010.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://vpnforandroid.github.io/uploads/2026/10/20261003.json
+- https://vpnforandroid.github.io/uploads/2026/10/20261010.json
 
 ## 更多Clash节点订阅 ：
 
